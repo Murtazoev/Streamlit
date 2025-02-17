@@ -37,9 +37,6 @@ fig = px.scatter(
 )
 st.plotly_chart(fig)
 
-penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
-st.success(f"Predicted species: **{penguins_species[prediction][0]}**")
-
 fig2 = px.histogram(
     df, 
     x='body_mass_g', 
@@ -94,3 +91,6 @@ st.dataframe(
                    'Chinstrap': st.column_config.ProgressColumn('Chinstrap' , format = '%f' , width = 'medium' , min_value = 0 , max_value = 1),
                    'Gentoo' : st.column_config.ProgressColumn('Gentoo' , format = '%f' , width = 'medium' , min_value = 0 , max_value = 1), }, 
   hide_index = True)
+
+penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+st.success(f"Predicted species: **{penguins_species[prediction][0]}**")
