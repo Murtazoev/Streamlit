@@ -37,6 +37,9 @@ fig = px.scatter(
 )
 st.plotly_chart(fig)
 
+penguins_species = np.array(['Adelie', 'Chinstrap', 'Gentoo'])
+st.success(f"Predicted species: **{penguins_species[prediction][0]}**")
+
 fig2 = px.histogram(
     df, 
     x='body_mass_g', 
