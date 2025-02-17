@@ -82,7 +82,7 @@ base_rf = RandomForestClassifier(random_state = 42)
 base_rf.fit(X , y)
 prediction = base_rf.predict(input_row)
 prediction_proba = base_rf.predict_proba(input_row)
-df_prediction_proba = pd.dataframe(prediction_proba, columns = ['Adelie' , 'Chinstrap' , 'Gentoo'])
+df_prediction_proba = pd.DataFrame(prediction_proba, columns = ['Adelie' , 'Chinstrap' , 'Gentoo'])
 
 st.subheader('Predict Species')
 st.dataframe(
